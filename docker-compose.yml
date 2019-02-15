@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7.22
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./docker/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    container_name: mysql
+
